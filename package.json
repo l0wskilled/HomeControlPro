@@ -1,0 +1,24 @@
+{
+  "name": "my-project-name",
+  "version": "0.2.0",
+  "description": "Contao Layout by Level9 GmbH",
+  "author": "Hendrik Knigge",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-postcss": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-file-creator": "latest",
+    "grunt-mkdir": "latest",
+    "grunt-newer": "latest",
+    "load-grunt-tasks": "latest",
+    "time-grunt": "latest",
+    "autoprefixer": "latest",
+    "cssnano": "latest",
+    "pixrem": "latest"
+  }
+}
