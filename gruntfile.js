@@ -23,7 +23,7 @@ module.exports = function (grunt) {
         'file-creator': {
             basic: {
                 'src/sass/global.scss': function (fs, fd, done) {
-                    fs.writeSync(fd, '//Import your files here!\n@import "box-sizing";\n@import "vars";\n@import "mixins";\n@import "predefined";\n@import "header";\n@import "main";\n@import "footer";\n@import "left";\n@import "right";\n');
+                    fs.writeSync(fd, '//Import your files here!\n@import "box-sizing";\n@import "vars";\n@import "mixins";\n@import "predefined";\n@import "header";\n@import "main";\n@import "footer";\n');
                     done();
                 },
                 'src/sass/_box-sizing.scss': function (fs, fd, done) {
