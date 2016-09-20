@@ -5,7 +5,6 @@
   "author": "Hendrik Knigge",
   "devDependencies": {
     "grunt": "latest",
-    "grunt-cli": "latest",
     "grunt-postcss": "latest",
     "grunt-contrib-concat": "latest",
     "grunt-contrib-copy": "latest",
