@@ -1,7 +1,7 @@
 {
-  "name": "my-project-name",
-  "version": "0.2.0",
-  "description": "Grunt Process by Hendrik Knigge",
+  "name": "HomeControlPro",
+  "version": "0.1",
+  "description": "Grunt for HomeControlPro",
   "author": "Hendrik Knigge",
   "devDependencies": {
     "grunt": "latest",
