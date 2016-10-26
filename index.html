@@ -9,56 +9,50 @@
     </header>
     <main id="main">
         <section id="Beleuchtung">
-            <header>
+            <header class="section-header">
                 <h2 class="section-title">Beleuchtung</h2>
                 <i class="arrow-icon"></i>
             </header>
             <div class="section-body">
-                <dl>
-                    <dt><label for="lightstate">Licht:</label></dt>
-                    <dd><input id="lightState" name="lightState" type="checkbox" checked></dd>
-                    <dt><label for="lightBrightness">Helligkeit:</label></dt>
-                    <dd><input id="lightBrightness" name="lightBrightness" type="range" max="100"
-                               value="75"></dd>
-                    <dt><label for="lightColor">Farbtemperatur:</label></dt>
-                    <dd><input id="lightColor" name="lightColor" type="color" value="#ffff99"></dd>
-                </dl>
+                    <div><label for="lightstate">Licht:</label></div>
+                    <div><input id="lightState" name="lightState" type="checkbox" checked></div>
+                    <div><label for="lightBrightness">Helligkeit:</label></div>
+                    <div><input id="lightBrightness" name="lightBrightness" type="range" max="100"
+                               value="75"></div>
+                    <div><label for="lightColor">Farbtemperatur:</label></div>
+                    <div><input id="lightColor" name="lightColor" type="color" value="#ffff99"></div>
             </div>
         </section>
         <section id="Heizung">
-            <header>
+            <header class="section-header">
                 <h2 class="section-title">Heizung</h2>
                 <i class="arrow-icon"></i>
             </header>
             <div class="section-body">
-                <dl>
-                    <dt><label for="heatcurrent">Temperatur:</label></dt>
-                    <dd><input id="heatCurrent" name="heatCurrent" type="text" value="23.7"></dd>
-                    <dt><label for="heatWanted">Min.:</label></dt>
-                    <dd><input id="heatWanted" name="heatWanted" type="range" value="20.0" max="30"></dd>
-                    <dt></dt>
-                    <dd><input id="heatAuto" name="heatAuto" type="checkbox" checked></dd>
-                </dl>
+                    <div><label for="heatcurrent">Temperatur:</label></div>
+                    <div><input id="heatCurrent" name="heatCurrent" type="text" value="23.7"></div>
+                    <div><label for="heatWanted">Min.:</label></div>
+                    <div><input id="heatWanted" name="heatWanted" type="range" value="20.0" max="30"></div>
+                    <div></div>
+                    <div><input id="heatAuto" name="heatAuto" type="checkbox" checked></div>
             </div>
         </section>
         <section id="Kaffeemaschine">
-            <header>
+            <header class="section-header">
                 <h2 class="section-title">Kaffeemaschine</h2>
                 <i class="arrow-icon"></i>
             </header>
             <div class="section-body">
-                <dl>
-                    <dt><label for="coffeeBeans">Füllstand</label></dt>
-                    <dd>
+                    <div><label for="coffeeBeans">Füllstand</label></div>
+                    <div>
                         <progress id="coffeeBeans"  name="coffeeBeans" value="66" max="100"></progress>
-                    </dd>
-                </dl>
+                    </div>
             </div>
         </section>
 
     </main>
     <footer id="footer">
-        <button id="settings">Einstellungen</button>
+        <button type="button" id="settings">Einstellungen</button>
         <button type="submit" id="refresh">Aktualisieren</button>
     </footer>
 </form>

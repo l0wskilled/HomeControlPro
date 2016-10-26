@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import "vars";
+@import "mixins";
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
 body,
 h1,
 h2,
@@ -8,6 +16,39 @@ h6 {
     margin: 0;
 }
 
-body {
-    font-family: "Robo Sans", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: .05rem;
+    font-weight: bold;
+}
+
+html {
+    font-size: 100.1%;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: .1rem dashed $black;
+}
+
+//progress needs fixed font size because it scales with it
+progress {
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: $shaded-medium-bg;
+    color: $shaded-medium-fg;
+    padding: $spacing;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    &:active {
+        transform: translateY($spacing / 2);
+    }
 }

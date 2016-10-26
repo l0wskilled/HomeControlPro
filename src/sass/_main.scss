@@ -2,16 +2,55 @@
 @import "mixins";
 
 #main {
-    dl:after {
-        content: "";
-        display: table;
-        clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    background-color: $lightGray;
+    > section {
+        overflow: hidden;
+        flex-grow: 1;
+        @include media("<tablet") {
+            flex-basis: 100%;
+        }
+        @include media(">=tablet", "<desktop") {
+            flex-basis: 50%;
+        }
+        @include media(">=desktop", "<1650px") {
+            flex-basis: 33.333%;
+        }
+        @include media(">=1650px") {
+            flex-basis: auto;
+        }
     }
-    dt {
-        float: left;
-        clear: both;
+}
+
+.section-header {
+    background-color: $shaded-bg;
+    color: $shaded-fg;
+    padding: ($spacing / 2);
+}
+
+.section-title {
+    font-size: 1.25rem;
+}
+
+.section-body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    background-color: $white;
+    @include media(">=tablet") {
+        margin-right: ($spacing / 2);
+        margin-left: ($spacing / 2);
     }
-    dd {
-        float: right;
+    > div {
+        flex-grow: 1;
+        flex-basis: 40%;
+        padding: $spacing;
+        &:nth-child(4n), &:nth-child(4n-1) {
+            background-color: lighten($black, 97%);
+        }
     }
 }

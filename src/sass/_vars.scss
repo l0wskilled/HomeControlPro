@@ -1,8 +1,39 @@
-//insert $vars here
 $pathImg: "/dist/img/";
+
+$spacing: 1vmin;
+
 $white: #ffffff;
 $black: #000000;
-$darkBlue: #000083;
-$lightBlue: lighten($darkBlue, 50%);
-$darkGray: #4a4a4a;
+$darkBlue: #001f83;
+$darkRed: #7a0b07;
+$darkGray: #333333;
 $lightGray: lighten($darkGray, 50%);
+
+$chosen-color: $darkBlue;
+
+//INVERTED
+$inverted-bg: $chosen-color;
+$inverted-fg: $white;
+
+//SHADED
+$shaded-bg: desaturate(lighten($chosen-color, 25%), 50%);
+$shaded-fg: $white;
+
+//SHADED MEDIUM
+$shaded-medium-bg: desaturate(lighten($chosen-color, 50%), 50%);
+$shaded-medium-fg: $darkGray;
+
+//SHADED LIGHT
+$shaded-light-bg: desaturate(lighten($chosen-color, 75%), 75%);
+$shaded-light-fg: $lightGray;
+
+//DEFAULT
+$default-bg: $white;
+$default-fg: $black;
+
+//media query breakpoints
+$breakpoints: (
+        'phone': 360px,
+        'tablet': 768px,
+        'desktop': 1024px
+);

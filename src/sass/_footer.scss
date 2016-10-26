@@ -2,5 +2,12 @@
 @import "mixins";
 
 #footer {
-    background-color: $darkBlue;
+    background-color: $inverted-bg;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: $spacing;
+    > * + * {
+        margin-left: $spacing;
+    }
 }
