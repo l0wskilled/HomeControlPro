@@ -2,5 +2,16 @@
 @import "mixins";
 
 #main {
-
+    dl:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    dt {
+        float: left;
+        clear: both;
+    }
+    dd {
+        float: right;
+    }
 }

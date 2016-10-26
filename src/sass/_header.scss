@@ -2,5 +2,10 @@
 @import "mixins";
 
 #header {
-
+    background-color: $darkBlue;
+    h1 {
+        text-align: center;
+        color: $white;
+        font-weight: bold;
+    }
 }

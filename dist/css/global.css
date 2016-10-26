@@ -1,2 +1,2 @@
-*,:after,:before{box-sizing:border-box}div.inside:after,div.inside:before{content:"";display:table}div.inside:after{clear:both}
+*,:after,:before{box-sizing:border-box}body,h1,h2,h3,h4,h5,h6{margin:0}body{font-family:Robo Sans,sans-serif}#header{background-color:#000083}#header h1{text-align:center;color:#fff;font-weight:700}#main dl:after{content:"";display:table;clear:both}#main dt{float:left;clear:both}#main dd{float:right}#footer{background-color:#000083}
 /*# sourceMappingURL=global.css.map */
