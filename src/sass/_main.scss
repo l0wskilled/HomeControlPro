@@ -7,7 +7,6 @@
     display: flex;
     flex-wrap: wrap;
     align-content: stretch;
-    background-color: $lightGray;
     > section {
         overflow: hidden;
         flex-grow: 1;
@@ -21,7 +20,7 @@
             flex-basis: 33.333%;
         }
         @include media(">=1650px") {
-            flex-basis: auto;
+            flex-basis: 25%;
         }
     }
 }
@@ -44,6 +43,7 @@
     right: ($spacing * 2);
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 
 .section-title {
@@ -54,11 +54,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    background-color: $white;
-    @include media(">=tablet") {
-        margin-right: ($spacing / 2);
-        margin-left: ($spacing / 2);
-    }
+    //@include media(">=tablet") {
+    //    margin-right: ($spacing / 2);
+    //    margin-left: ($spacing / 2);
+    //}
     .left, .right {
         flex-grow: 1;
         flex-basis: 40%;
