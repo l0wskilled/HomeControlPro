@@ -14,13 +14,19 @@
                 <i class="arrow-icon"></i>
             </header>
             <div class="section-body">
-                    <div><label for="lightstate">Licht:</label></div>
-                    <div><input id="lightState" name="lightState" type="checkbox" checked></div>
-                    <div><label for="lightBrightness">Helligkeit:</label></div>
-                    <div><input id="lightBrightness" name="lightBrightness" type="range" max="100"
-                               value="75"></div>
-                    <div><label for="lightColor">Farbtemperatur:</label></div>
-                    <div><input id="lightColor" name="lightColor" type="color" value="#ffff99"></div>
+                <div class="left"><label for="lightState">Licht:</label></div>
+                <div class="right">
+                    <div class="checkbox-wrapper">
+                        <input id="lightState" name="lightState" type="checkbox" checked>
+                        <label for="lightState"></label>
+                    </div>
+                </div>
+                <div class="left"><label for="lightBrightness">Helligkeit:</label></div>
+                <div class="right">
+                    <input id="lightBrightness" name="lightBrightness" type="range" max="100" value="75">
+                </div>
+                <div class="left"><label for="lightColor">Farbtemperatur:</label></div>
+                <div class="right"><input id="lightColor" name="lightColor" type="color" value="#ffff99"></div>
             </div>
         </section>
         <section id="Heizung">
@@ -29,12 +35,17 @@
                 <i class="arrow-icon"></i>
             </header>
             <div class="section-body">
-                    <div><label for="heatcurrent">Temperatur:</label></div>
-                    <div><input id="heatCurrent" name="heatCurrent" type="text" value="23.7"></div>
-                    <div><label for="heatWanted">Min.:</label></div>
-                    <div><input id="heatWanted" name="heatWanted" type="range" value="20.0" max="30"></div>
-                    <div></div>
-                    <div><input id="heatAuto" name="heatAuto" type="checkbox" checked></div>
+                <div class="left"><label for="heatcurrent">Temperatur:</label></div>
+                <div class="right"><input id="heatCurrent" name="heatCurrent" type="text" value="23.7"></div>
+                <div class="left"><label for="heatWanted">Min.:</label></div>
+                <div class="right"><input id="heatWanted" name="heatWanted" type="range" value="20.0" max="30"></div>
+                <div class="left"><label for="heatAuto">Automatisch absenken:</label></div>
+                <div class="right">
+                    <div class="checkbox-wrapper">
+                        <input id="heatAuto" name="heatAuto" type="checkbox" checked>
+                        <label for="heatAuto"></label>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="Kaffeemaschine">
@@ -43,10 +54,10 @@
                 <i class="arrow-icon"></i>
             </header>
             <div class="section-body">
-                    <div><label for="coffeeBeans">Füllstand</label></div>
-                    <div>
-                        <progress id="coffeeBeans"  name="coffeeBeans" value="66" max="100"></progress>
-                    </div>
+                <div class="left"><label for="coffeeBeans">Füllstand</label></div>
+                <div class="right">
+                    <progress id="coffeeBeans" name="coffeeBeans" value="66" max="100"></progress>
+                </div>
             </div>
         </section>
 

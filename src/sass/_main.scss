@@ -30,6 +30,20 @@
     background-color: $shaded-bg;
     color: $shaded-fg;
     padding: ($spacing / 2);
+    position: relative;
+}
+
+.arrow-icon {
+    $arrowSize: $spacing * 1.5;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $arrowSize $arrowSize 0;
+    border-color: $white transparent transparent transparent;
+    position: absolute;
+    right: ($spacing * 2);
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .section-title {
@@ -45,12 +59,71 @@
         margin-right: ($spacing / 2);
         margin-left: ($spacing / 2);
     }
-    > div {
+    .left, .right {
         flex-grow: 1;
         flex-basis: 40%;
         padding: $spacing;
         &:nth-child(4n), &:nth-child(4n-1) {
             background-color: lighten($black, 97%);
+        }
+    }
+    .right > * {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+//checkbox hack for a prettier switch
+.checkbox-wrapper {
+    $switchUnit: .5rem;
+    $switchLabelFontSize: ($switchUnit * 1.6);
+    $buttonSpacing: ($switchUnit * .2);
+    $switchWidth: ($switchUnit * 8);
+    $movementDistance: ($switchWidth / 2) - $buttonSpacing;
+    $switchHeight: ($switchWidth * .35);
+    $switchRadius: ($switchUnit * 3);
+    width: $switchWidth;
+    height: $switchHeight;
+    margin: 0 auto;
+    background: $darkGray;
+    position: relative;
+    border-radius: $switchRadius;
+    overflow: hidden;
+    &:before, &:after {
+        font-size: $switchLabelFontSize;
+        line-height: $switchHeight;
+        position: absolute;
+        font-weight: bold;
+    }
+    &:before {
+        content: 'ON';
+        color: $success;
+        left: 0;
+        padding-left: $buttonSpacing * 2;
+    }
+    &:after {
+        content: 'OFF';
+        color: $fail;
+        right: 0;
+        padding-right: $buttonSpacing * 2;
+    }
+    label {
+        display: block;
+        width: ($switchWidth / 2);
+        height: ($switchHeight - ($buttonSpacing * 2));
+        cursor: pointer;
+        position: absolute;
+        top: $buttonSpacing;
+        left: $buttonSpacing;
+        z-index: 1;
+        background: darken($white, 2%);
+        border-radius: $switchRadius;
+        transition: left .4s ease;
+    }
+    input[type=checkbox] {
+        visibility: hidden;
+        &:checked + label {
+            left: $movementDistance;
         }
     }
 }
