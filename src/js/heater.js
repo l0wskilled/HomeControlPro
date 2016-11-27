@@ -81,4 +81,3 @@ $(document).ready(function () {
 
     var timer = setInterval(getHeat, 30000);
 });
-//# sourceMappingURL=global.js.map
