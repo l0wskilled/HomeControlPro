@@ -2,6 +2,10 @@
 // -> verschwindet leider beim neu laden :-(
 var serverHostName;
 
+if (typeof(Storage) !== "undefined") {
+    serverHostName = localStorage.getItem('serverHostName');
+}
+
 // Definiere pressEnter-Event, benötigt für Text-Felder
 $.fn.pressEnter = function(fn) {
     return this.each(function() {
@@ -23,7 +27,12 @@ $(document).ready(function() {
 function onDeviceReady() {
 
     // Servername standardmäßig auf aktuellen Host aktualisieren - hier könnte man vielleicht eine HTML5-API verwenden?!
-    updateServer(location.host);
+    if (localStorage.getItem('serverHostName') != null) {
+        updateServer(serverHostName);
+    } else {
+        updateServer(location.host);
+    }
+
 
     // Button #mainSetting -> Dialogfenster anzeigen
     // (ggf. ID von mainSettings passend zu Button im Footer anpassen)
@@ -50,7 +59,10 @@ function onDeviceReady() {
     });
 
     // Blende Willkommen-Dialog ein
-    $("#dialogWelcome").modal();
+    if (sessionStorage.getItem('welcome-shown') != 'true') {
+        $("#dialogWelcome").modal();
+        sessionStorage.setItem('welcome-shown', 'true');
+    }
 }
 
 /* Aktualisiere Server-Name */
@@ -72,4 +84,7 @@ function updateServer(hostname)
     $("#tfdIpAdress").val(hostname);
     /* Update setting - vielleicht besser mit HTML5-API?*/
     serverHostName = hostname;
+    if (typeof(Storage) !== "undefined") {
+        localStorage.setItem('serverHostName', serverHostName);
+    }
 }
