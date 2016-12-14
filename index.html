@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <title>Title</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="dist/css/global.css">
 <form method="post" action="http://192.168.50.30/checkme/">
     <header id="header">
@@ -17,16 +18,21 @@
                 <div class="left"><label for="lightState">Licht:</label></div>
                 <div class="right">
                     <div class="checkbox-wrapper">
-                        <input id="lightState" name="lightState" type="checkbox" checked>
+                        <input id="lightState" name="lightState" type="checkbox"
+                               checked>
                         <label for="lightState"></label>
                     </div>
                 </div>
-                <div class="left"><label for="lightBrightness">Helligkeit:</label></div>
-                <div class="right">
-                    <input id="lightBrightness" name="lightBrightness" type="range" max="100" value="75">
+                <div class="left"><label for="lightBrightness">Helligkeit:</label>
                 </div>
-                <div class="left"><label for="lightColor">Farbtemperatur:</label></div>
-                <div class="right"><input id="lightColor" name="lightColor" type="color" value="#ffff99"></div>
+                <div class="right">
+                    <input id="lightBrightness" name="lightBrightness" type="range"
+                           max="100" value="75">
+                </div>
+                <div class="left"><label for="lightColor">Farbtemperatur:</label>
+                </div>
+                <div class="right"><input id="lightColor" name="lightColor"
+                                          type="color" value="#ffff99"></div>
             </div>
         </section>
         <section id="Heizung">
@@ -36,10 +42,13 @@
             </header>
             <div class="section-body">
                 <div class="left"><label for="heatcurrent">Temperatur:</label></div>
-                <div class="right"><input id="heatCurrent" name="heatCurrent" type="text" value="23.7" disabled></div>
+                <div class="right"><input id="heatCurrent" name="heatCurrent"
+                                          type="text" value="23.7" disabled></div>
                 <div class="left"><label for="heatWanted">Min.:</label></div>
-                <div class="right"><input id="heatWanted" name="heatWanted" type="range" value="20.0" max="30"></div>
-                <div class="left"><label for="heatAuto">Automatisch absenken:</label></div>
+                <div class="right"><input id="heatWanted" name="heatWanted"
+                                          type="range" value="20.0" max="30"></div>
+                <div class="left"><label for="heatAuto">Automatisch absenken:</label>
+                </div>
                 <div class="right">
                     <div class="checkbox-wrapper">
                         <input id="heatAuto" name="heatAuto" type="checkbox" checked>
@@ -56,16 +65,44 @@
             <div class="section-body">
                 <div class="left"><label for="coffeeBeans">Füllstand</label></div>
                 <div class="right">
-                    <progress id="coffeeBeans" name="coffeeBeans" value="66" max="100"></progress>
+                    <progress id="coffeeBeans" name="coffeeBeans" value="66"
+                              max="100"></progress>
                 </div>
             </div>
         </section>
 
     </main>
     <footer id="footer">
-        <button type="button" id="settings">Einstellungen</button>
+        <button type="button" id="mainSettings">Einstellungen</button>
         <button type="submit" id="refresh">Aktualisieren</button>
     </footer>
 </form>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<div id="dialogServer" class="dialog">
+    <h2>Server konfigurieren</h2>
+    <div class="ui-field-contain">
+        <label for="tfdIpAdress">Bitte geben Sie die IP-Adresse des Servers
+            ein:</label><br/><input id="tfdIpAdress" type="text"><br/>
+        <div class="buttonBar">
+            <button type="button" id="setServer">OK</button>
+            <button type="button" id="cancelServer" class="simplemodal-close">
+                Abbrechen
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Dialog für die erste Begrüßung / Bitte in eigene HTML-Datei übernehmen -->
+<div id="dialogWelcome" class="dialog">
+    <h2>Herlich Willkommen</h2>
+    <p>Willkommen bei HomeControl Pro!</p>
+    <div class="ui-field-contain">
+        <div class="buttonBar">
+            <button type="button" id="closeWelcome" class="simplemodal-close">
+                Schließen
+            </button>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplemodal/1.4.4/jquery.simplemodal.min.js"></script>
 <script src="dist/js/global.min.js"></script>

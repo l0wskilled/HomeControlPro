@@ -1,0 +1,25 @@
+@import "vars";
+@import "mixins";
+
+#dialogServer,
+#dialogWelcome {
+    display: none;
+    background-color: rgba($white, .9);
+    border-radius: 6px;
+    border: 2px solid $lightGray;
+
+    position: fixed;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%,-50%);
+
+    h2 {
+        background: linear-gradient(to right, rgb(0,0,102) 0%, rgb(153,153,255) 100%);
+    }
+}
+
+.dialog {
+    padding: 1em;
+    border: 1px solid;
+    background-color: white;
+}

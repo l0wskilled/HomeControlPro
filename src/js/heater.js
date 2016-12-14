@@ -79,5 +79,6 @@ $(document).ready(function () {
         heatWantedChanged($(this));
     });
 
-    var timer = setInterval(getHeat, 30000);
+    //super annoying while developing
+    //var timer = setInterval(getHeat, 30000);
 });
